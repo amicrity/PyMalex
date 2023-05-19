@@ -1,0 +1,2275 @@
+Malex.pyc (Python 3.9)
+[Code]
+    File Name: C:\Users\Aryann\Downloads\project\Malex.py
+    Object Name: <module>
+    Arg Count: 0
+    Pos Only Arg Count: 0
+    KW Only Arg Count: 0
+    Locals: 0
+    Stack Size: 12
+    Flags: 0x00000040 (CO_NOFREE)
+    [Names]
+        'os'
+        'name'
+        'system'
+        'listdir'
+        'startfile'
+        'time'
+        'sleep'
+        'perf_counter'
+        'colorama'
+        'Fore'
+        'init'
+        'pymem'
+        'Pymem'
+        'random'
+        'choice'
+        'randint'
+        'webbrowser'
+        'open'
+        'link'
+        'psutil'
+        'virtual_memory'
+        'subprocess'
+        'check_output'
+        'winreg'
+        'threading'
+        'Thread'
+        'requests'
+        'get'
+        'thisVersion'
+        'banPrompt'
+        'banUser'
+        'unbanUser'
+        'ConnectRegistry'
+        'HKEY_LOCAL_MACHINE'
+        'reg'
+        'OpenKey'
+        'k'
+        'rover'
+        'start'
+        'quit'
+        'Exception'
+        'err'
+        'isinstance'
+        'WindowsError'
+        'input'
+        'RED'
+        'str'
+        'print'
+        'YELLOW'
+        'RESET'
+        'r'
+        'int'
+        'text'
+        'latestVersion'
+        'CYAN'
+        'GREEN'
+        'BLUE'
+        'LIGHTCYAN_EX'
+        'LIGHTMAGENTA_EX'
+        'MAGENTA'
+        'LIGHTRED_EX'
+        'LIGHTBLUE_EX'
+        'LIGHTGREEN_EX'
+        'LIGHTYELLOW_EX'
+        'Fores'
+        '_'
+        'write'
+        'close'
+        'Malex'
+        'countdown'
+        'processExists'
+        'realCountdown'
+        'cls'
+        'effect'
+        'execute'
+        'Error'
+    [Var Names]
+    [Free Vars]
+    [Cell Vars]
+    [Constants]
+        0
+        (
+            'name'
+            'system'
+            'listdir'
+            'startfile'
+        )
+        (
+            'sleep'
+            'perf_counter'
+        )
+        (
+            'Fore'
+            'init'
+        )
+        (
+            'Pymem'
+        )
+        (
+            'choice'
+            'randint'
+        )
+        (
+            'open'
+        )
+        (
+            'virtual_memory'
+        )
+        (
+            'check_output'
+        )
+        None
+        (
+            'Thread'
+        )
+        (
+            'get'
+        )
+        True
+        (
+            'convert'
+        )
+        149
+        [Code]
+            File Name: C:\Users\Aryann\Downloads\project\Malex.py
+            Object Name: banPrompt
+            Arg Count: 0
+            Pos Only Arg Count: 0
+            KW Only Arg Count: 0
+            Locals: 0
+            Stack Size: 2
+            Flags: 0x00000043 (CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE)
+            [Names]
+                'system'
+                'quit'
+            [Var Names]
+            [Free Vars]
+            [Cell Vars]
+            [Constants]
+                None
+                'mshta javascript:alert("You are banned from accessing Malex. ");close();'
+            [Disassembly]
+                0       LOAD_GLOBAL                   0: system
+                2       LOAD_CONST                    1: 'mshta javascript:alert("You are banned from accessing Malex. ");close();'
+                4       CALL_FUNCTION                 1
+                6       POP_TOP
+                8       LOAD_GLOBAL                   1: NULL + system
+                10      CALL_FUNCTION                 0
+                12      POP_TOP
+                14      LOAD_CONST                    0: None
+                16      RETURN_VALUE
+        'banPrompt'
+        [Code]
+            File Name: C:\Users\Aryann\Downloads\project\Malex.py
+            Object Name: banUser
+            Arg Count: 0
+            Pos Only Arg Count: 0
+            KW Only Arg Count: 0
+            Locals: 1
+            Stack Size: 4
+            Flags: 0x00000043 (CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE)
+            [Names]
+                'winreg'
+                'CreateKey'
+                'HKEY_LOCAL_MACHINE'
+            [Var Names]
+                'key'
+            [Free Vars]
+            [Cell Vars]
+            [Constants]
+                None
+                'SOFTWARE\\Microsoft\\WS'
+            [Disassembly]
+                0       LOAD_GLOBAL                   0: winreg
+                2       LOAD_METHOD                   1: CreateKey
+                4       LOAD_GLOBAL                   0: winreg
+                6       LOAD_ATTR                     2: HKEY_LOCAL_MACHINE
+                8       LOAD_CONST                    1: 'SOFTWARE\\Microsoft\\WS'
+                10      CALL_METHOD                   2
+                12      STORE_FAST                    0: key
+                14      LOAD_CONST                    0: None
+                16      RETURN_VALUE
+        'banUser'
+        [Code]
+            File Name: C:\Users\Aryann\Downloads\project\Malex.py
+            Object Name: unbanUser
+            Arg Count: 0
+            Pos Only Arg Count: 0
+            KW Only Arg Count: 0
+            Locals: 0
+            Stack Size: 4
+            Flags: 0x00000003 (CO_OPTIMIZED | CO_NEWLOCALS)
+            [Names]
+                'winreg'
+                'HKEY_LOCAL_MACHINE'
+            [Var Names]
+            [Free Vars]
+            [Cell Vars]
+                'deleteSubkey'
+            [Constants]
+                None
+                ''
+                [Code]
+                    File Name: C:\Users\Aryann\Downloads\project\Malex.py
+                    Object Name: deleteSubkey
+                    Arg Count: 3
+                    Pos Only Arg Count: 0
+                    KW Only Arg Count: 0
+                    Locals: 8
+                    Stack Size: 8
+                    Flags: 0x00000013 (CO_OPTIMIZED | CO_NEWLOCALS | CO_NESTED)
+                    [Names]
+                        'winreg'
+                        'OpenKey'
+                        'KEY_ALL_ACCESS'
+                        'QueryInfoKey'
+                        'range'
+                        'EnumKey'
+                        'DeleteKey'
+                        'print'
+                        'Close'
+                    [Var Names]
+                        'key0'
+                        'key1'
+                        'key2'
+                        'currentkey'
+                        'open_key'
+                        'infokey'
+                        'x'
+                        'subkey'
+                    [Free Vars]
+                        'deleteSubkey'
+                    [Cell Vars]
+                    [Constants]
+                        None
+                        ''
+                        '\\'
+                        0
+                        'Removed %s\\%s '
+                    [Disassembly]
+                        0       LOAD_FAST                     2: key2
+                        2       LOAD_CONST                    1: ''
+                        4       COMPARE_OP                    2 (==)
+                        6       POP_JUMP_IF_FALSE             14
+                        8       LOAD_FAST                     1: key1
+                        10      STORE_FAST                    3: currentkey
+                        12      JUMP_FORWARD                  12 (to 26)
+                        14      LOAD_FAST                     1: key1
+                        16      LOAD_CONST                    2: '\\'
+                        18      BINARY_ADD
+                        20      LOAD_FAST                     2: key2
+                        22      BINARY_ADD
+                        24      STORE_FAST                    3: currentkey
+                        26      LOAD_GLOBAL                   0: winreg
+                        28      LOAD_METHOD                   1: OpenKey
+                        30      LOAD_FAST                     0: key0
+                        32      LOAD_FAST                     3: currentkey
+                        34      LOAD_CONST                    3: 0
+                        36      LOAD_GLOBAL                   0: winreg
+                        38      LOAD_ATTR                     2: KEY_ALL_ACCESS
+                        40      CALL_METHOD                   4
+                        42      STORE_FAST                    4: open_key
+                        44      LOAD_GLOBAL                   0: winreg
+                        46      LOAD_METHOD                   3: QueryInfoKey
+                        48      LOAD_FAST                     4: open_key
+                        50      CALL_METHOD                   1
+                        52      STORE_FAST                    5: infokey
+                        54      LOAD_GLOBAL                   4: KEY_ALL_ACCESS
+                        56      LOAD_CONST                    3: 0
+                        58      LOAD_FAST                     5: infokey
+                        60      LOAD_CONST                    3: 0
+                        62      BINARY_SUBSCR
+                        64      CALL_FUNCTION                 2
+                        66      GET_ITER
+                        68      FOR_ITER                      74 (to 144)
+                        70      STORE_FAST                    6: x
+                        72      LOAD_GLOBAL                   0: winreg
+                        74      LOAD_METHOD                   5: EnumKey
+                        76      LOAD_FAST                     4: open_key
+                        78      LOAD_CONST                    3: 0
+                        80      CALL_METHOD                   2
+                        82      STORE_FAST                    7: subkey
+                        84      SETUP_FINALLY                 32 (to 118)
+                        86      LOAD_GLOBAL                   0: winreg
+                        88      LOAD_METHOD                   6: DeleteKey
+                        90      LOAD_FAST                     4: open_key
+                        92      LOAD_FAST                     7: subkey
+                        94      CALL_METHOD                   2
+                        96      POP_TOP
+                        98      LOAD_GLOBAL                   7: NULL + QueryInfoKey
+                        100     LOAD_CONST                    4: 'Removed %s\\%s '
+                        102     LOAD_FAST                     3: currentkey
+                        104     LOAD_FAST                     7: subkey
+                        106     BUILD_TUPLE                   2
+                        108     BINARY_MODULO
+                        110     CALL_FUNCTION                 1
+                        112     POP_TOP
+                        114     POP_BLOCK
+                        116     JUMP_ABSOLUTE                 68
+                        118     POP_TOP
+                        120     POP_TOP
+                        122     POP_TOP
+                        124     LOAD_DEREF                    0: deleteSubkey
+                        126     LOAD_FAST                     0: key0
+                        128     LOAD_FAST                     3: currentkey
+                        130     LOAD_FAST                     7: subkey
+                        132     CALL_FUNCTION                 3
+                        134     POP_TOP
+                        136     POP_EXCEPT
+                        138     JUMP_ABSOLUTE                 68
+                        140     RERAISE
+                        142     JUMP_ABSOLUTE                 68
+                        144     LOAD_GLOBAL                   0: winreg
+                        146     LOAD_METHOD                   6: DeleteKey
+                        148     LOAD_FAST                     4: open_key
+                        150     LOAD_CONST                    1: ''
+                        152     CALL_METHOD                   2
+                        154     POP_TOP
+                        156     LOAD_FAST                     4: open_key
+                        158     LOAD_METHOD                   8: Close
+                        160     CALL_METHOD                   0
+                        162     POP_TOP
+                        164     LOAD_CONST                    0: None
+                        166     RETURN_VALUE
+                'unbanUser.<locals>.deleteSubkey'
+                'SOFTWARE\\Microsoft\\WS'
+                (
+                    ''
+                )
+            [Disassembly]
+                0       LOAD_CONST                    5: ('',)
+                2       LOAD_CLOSURE                  0: deleteSubkey
+                4       BUILD_TUPLE                   1
+                6       LOAD_CONST                    2: <CODE> deleteSubkey
+                8       LOAD_CONST                    3: 'unbanUser.<locals>.deleteSubkey'
+                10      MAKE_FUNCTION                 9
+                12      STORE_DEREF                   0: deleteSubkey
+                14      LOAD_DEREF                    0: deleteSubkey
+                16      LOAD_GLOBAL                   0: winreg
+                18      LOAD_ATTR                     1: HKEY_LOCAL_MACHINE
+                20      LOAD_CONST                    4: 'SOFTWARE\\Microsoft\\WS'
+                22      CALL_FUNCTION                 2
+                24      POP_TOP
+                26      LOAD_CONST                    0: None
+                28      RETURN_VALUE
+        'unbanUser'
+        'SOFTWARE\\Microsoft\\WS'
+        (
+            'target'
+        )
+        'Unexpected error: '
+        'User is not banned.'
+        'https://pastebin.com/raw/Rsr7KGZ0'
+        'user-agent'
+        'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36'
+        (
+            'headers'
+        )
+        "The Malex version you are currently using is outdated. Please check the Malex github repo to get the latest version (you're being forced to exit)\n"
+        'Latest version of Malex.'
+        'Malex could not verify if the version you are using is the latest version. You are forced to exit\n'
+        'notblocked.txt'
+        'w'
+        ''
+        'blocks.txt'
+        'information.txt'
+        '\n                    ..          ..            .            .           . . . . . .   .        .\n                    . .        . .           . .           .           .              .      .\n                    .  .      .  .          .   .          .           .               .    .\n                    .   .    .   .         .     .         .           .                 . .\n                    .    .  .    .        . . . . .        .           . . . . . .        .\n                    .     ..     .       .         .       .           .                 . .\n                    .            .      .           .      .           .                .   .\n                    .            .     .             .     .           .               .     .\n                    .            .    .               .    .           .              .       .\n                    .            .   .                 .   . . . . .   . . . . . .   .         .\n    '
+        [Code]
+            File Name: C:\Users\Aryann\Downloads\project\Malex.py
+            Object Name: countdown
+            Arg Count: 1
+            Pos Only Arg Count: 0
+            KW Only Arg Count: 0
+            Locals: 4
+            Stack Size: 4
+            Flags: 0x00000043 (CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE)
+            [Names]
+                'divmod'
+                'format'
+                'print'
+                'choice'
+                'Fores'
+                'sleep'
+            [Var Names]
+                'time_sec'
+                'mins'
+                'secs'
+                'timeformat'
+            [Free Vars]
+            [Cell Vars]
+            [Constants]
+                None
+                60
+                '{:02d}:{:02d}'
+                '\r'
+                (
+                    'end'
+                )
+                0.05
+                1
+            [Disassembly]
+                0       LOAD_FAST                     0: time_sec
+                2       POP_JUMP_IF_FALSE             68
+                4       LOAD_GLOBAL                   0: divmod
+                6       LOAD_FAST                     0: time_sec
+                8       LOAD_CONST                    1: 60
+                10      CALL_FUNCTION                 2
+                12      UNPACK_SEQUENCE               2
+                14      STORE_FAST                    1: mins
+                16      STORE_FAST                    2: secs
+                18      LOAD_CONST                    2: '{:02d}:{:02d}'
+                20      LOAD_METHOD                   1: format
+                22      LOAD_FAST                     1: mins
+                24      LOAD_FAST                     2: secs
+                26      CALL_METHOD                   2
+                28      STORE_FAST                    3: timeformat
+                30      LOAD_GLOBAL                   2: format
+                32      LOAD_GLOBAL                   3: NULL + format
+                34      LOAD_GLOBAL                   4: print
+                36      CALL_FUNCTION                 1
+                38      LOAD_FAST                     3: timeformat
+                40      BINARY_ADD
+                42      LOAD_CONST                    3: '\r'
+                44      LOAD_CONST                    4: ('end',)
+                46      CALL_FUNCTION_KW              2
+                48      POP_TOP
+                50      LOAD_GLOBAL                   5: NULL + print
+                52      LOAD_CONST                    5: 0.05
+                54      CALL_FUNCTION                 1
+                56      POP_TOP
+                58      LOAD_FAST                     0: time_sec
+                60      LOAD_CONST                    6: 1
+                62      INPLACE_SUBTRACT
+                64      STORE_FAST                    0: time_sec
+                66      JUMP_ABSOLUTE                 0
+                68      LOAD_CONST                    0: None
+                70      RETURN_VALUE
+        'countdown'
+        [Code]
+            File Name: C:\Users\Aryann\Downloads\project\Malex.py
+            Object Name: processExists
+            Arg Count: 1
+            Pos Only Arg Count: 0
+            KW Only Arg Count: 0
+            Locals: 4
+            Stack Size: 4
+            Flags: 0x00000043 (CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE)
+            [Names]
+                'check_output'
+                'decode'
+                'strip'
+                'split'
+                'lower'
+                'startswith'
+            [Var Names]
+                'process_name'
+                'call'
+                'output'
+                'last_line'
+            [Free Vars]
+            [Cell Vars]
+            [Constants]
+                None
+                'TASKLIST'
+                '/FI'
+                'imagename eq %s'
+                '\r\n'
+                -1
+            [Disassembly]
+                0       LOAD_CONST                    1: 'TASKLIST'
+                2       LOAD_CONST                    2: '/FI'
+                4       LOAD_CONST                    3: 'imagename eq %s'
+                6       LOAD_FAST                     0: process_name
+                8       BINARY_MODULO
+                10      BUILD_TUPLE                   3
+                12      STORE_FAST                    1: call
+                14      LOAD_GLOBAL                   0: check_output
+                16      LOAD_FAST                     1: call
+                18      CALL_FUNCTION                 1
+                20      LOAD_METHOD                   1: decode
+                22      CALL_METHOD                   0
+                24      STORE_FAST                    2: output
+                26      LOAD_FAST                     2: output
+                28      LOAD_METHOD                   2: strip
+                30      CALL_METHOD                   0
+                32      LOAD_METHOD                   3: split
+                34      LOAD_CONST                    4: '\r\n'
+                36      CALL_METHOD                   1
+                38      LOAD_CONST                    5: -1
+                40      BINARY_SUBSCR
+                42      STORE_FAST                    3: last_line
+                44      LOAD_FAST                     3: last_line
+                46      LOAD_METHOD                   4: lower
+                48      CALL_METHOD                   0
+                50      LOAD_METHOD                   5: startswith
+                52      LOAD_FAST                     0: process_name
+                54      LOAD_METHOD                   4: lower
+                56      CALL_METHOD                   0
+                58      CALL_METHOD                   1
+                60      RETURN_VALUE
+        'processExists'
+        [Code]
+            File Name: C:\Users\Aryann\Downloads\project\Malex.py
+            Object Name: realCountdown
+            Arg Count: 1
+            Pos Only Arg Count: 0
+            KW Only Arg Count: 0
+            Locals: 4
+            Stack Size: 4
+            Flags: 0x00000043 (CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE)
+            [Names]
+                'divmod'
+                'format'
+                'print'
+                'choice'
+                'Fores'
+                'sleep'
+            [Var Names]
+                'time_sec'
+                'mins'
+                'secs'
+                'timeformat'
+            [Free Vars]
+            [Cell Vars]
+            [Constants]
+                None
+                60
+                '{:02d}:{:02d}'
+                '\r'
+                (
+                    'end'
+                )
+                1
+            [Disassembly]
+                0       LOAD_FAST                     0: time_sec
+                2       POP_JUMP_IF_FALSE             68
+                4       LOAD_GLOBAL                   0: divmod
+                6       LOAD_FAST                     0: time_sec
+                8       LOAD_CONST                    1: 60
+                10      CALL_FUNCTION                 2
+                12      UNPACK_SEQUENCE               2
+                14      STORE_FAST                    1: mins
+                16      STORE_FAST                    2: secs
+                18      LOAD_CONST                    2: '{:02d}:{:02d}'
+                20      LOAD_METHOD                   1: format
+                22      LOAD_FAST                     1: mins
+                24      LOAD_FAST                     2: secs
+                26      CALL_METHOD                   2
+                28      STORE_FAST                    3: timeformat
+                30      LOAD_GLOBAL                   2: format
+                32      LOAD_GLOBAL                   3: NULL + format
+                34      LOAD_GLOBAL                   4: print
+                36      CALL_FUNCTION                 1
+                38      LOAD_FAST                     3: timeformat
+                40      BINARY_ADD
+                42      LOAD_CONST                    3: '\r'
+                44      LOAD_CONST                    4: ('end',)
+                46      CALL_FUNCTION_KW              2
+                48      POP_TOP
+                50      LOAD_GLOBAL                   5: NULL + print
+                52      LOAD_CONST                    5: 1
+                54      CALL_FUNCTION                 1
+                56      POP_TOP
+                58      LOAD_FAST                     0: time_sec
+                60      LOAD_CONST                    5: 1
+                62      INPLACE_SUBTRACT
+                64      STORE_FAST                    0: time_sec
+                66      JUMP_ABSOLUTE                 0
+                68      LOAD_CONST                    0: None
+                70      RETURN_VALUE
+        'realCountdown'
+        [Code]
+            File Name: C:\Users\Aryann\Downloads\project\Malex.py
+            Object Name: cls
+            Arg Count: 0
+            Pos Only Arg Count: 0
+            KW Only Arg Count: 0
+            Locals: 0
+            Stack Size: 4
+            Flags: 0x00000043 (CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE)
+            [Names]
+                'name'
+                'system'
+                'print'
+                'Fore'
+                'RESET'
+                'choice'
+                'Fores'
+                'Malex'
+            [Var Names]
+            [Free Vars]
+            [Cell Vars]
+            [Constants]
+                None
+                'nt'
+                'cls'
+                'clear'
+            [Disassembly]
+                0       LOAD_GLOBAL                   0: name
+                2       LOAD_CONST                    1: 'nt'
+                4       COMPARE_OP                    2 (==)
+                6       POP_JUMP_IF_FALSE             18
+                8       LOAD_GLOBAL                   1: NULL + name
+                10      LOAD_CONST                    2: 'cls'
+                12      CALL_FUNCTION                 1
+                14      POP_TOP
+                16      JUMP_FORWARD                  8 (to 26)
+                18      LOAD_GLOBAL                   1: NULL + name
+                20      LOAD_CONST                    3: 'clear'
+                22      CALL_FUNCTION                 1
+                24      POP_TOP
+                26      LOAD_GLOBAL                   2: system
+                28      LOAD_GLOBAL                   3: NULL + system
+                30      LOAD_ATTR                     4: RESET
+                32      LOAD_GLOBAL                   5: NULL + print
+                34      LOAD_GLOBAL                   6: Fore
+                36      CALL_FUNCTION                 1
+                38      BINARY_ADD
+                40      LOAD_GLOBAL                   7: NULL + Fore
+                42      BINARY_ADD
+                44      LOAD_GLOBAL                   3: NULL + system
+                46      LOAD_ATTR                     4: RESET
+                48      BINARY_ADD
+                50      CALL_FUNCTION                 1
+                52      POP_TOP
+                54      LOAD_CONST                    0: None
+                56      RETURN_VALUE
+        'cls'
+        [Code]
+            File Name: C:\Users\Aryann\Downloads\project\Malex.py
+            Object Name: effect
+            Arg Count: 0
+            Pos Only Arg Count: 0
+            KW Only Arg Count: 0
+            Locals: 1
+            Stack Size: 16
+            Flags: 0x00000043 (CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE)
+            [Names]
+                'range'
+                'print'
+                'str'
+                'choice'
+                'Fore'
+                'RED'
+                'GREEN'
+                'MAGENTA'
+                'CYAN'
+                'BLUE'
+                'YELLOW'
+                'LIGHTBLUE_EX'
+                'LIGHTCYAN_EX'
+                'LIGHTGREEN_EX'
+                'LIGHTMAGENTA_EX'
+                'LIGHTRED_EX'
+                'LIGHTYELLOW_EX'
+                'randint'
+            [Var Names]
+                'i'
+            [Free Vars]
+            [Cell Vars]
+            [Constants]
+                None
+                5000
+                0
+                9
+                ''
+                (
+                    'end'
+                )
+            [Disassembly]
+                0       LOAD_GLOBAL                   0: range
+                2       LOAD_CONST                    1: 5000
+                4       CALL_FUNCTION                 1
+                6       GET_ITER
+                8       FOR_ITER                      86 (to 96)
+                10      STORE_FAST                    0: i
+                12      LOAD_GLOBAL                   1: NULL + range
+                14      LOAD_GLOBAL                   2: print
+                16      LOAD_GLOBAL                   3: NULL + print
+                18      LOAD_GLOBAL                   4: str
+                20      LOAD_ATTR                     5: RED
+                22      LOAD_GLOBAL                   4: str
+                24      LOAD_ATTR                     6: GREEN
+                26      LOAD_GLOBAL                   4: str
+                28      LOAD_ATTR                     7: MAGENTA
+                30      LOAD_GLOBAL                   4: str
+                32      LOAD_ATTR                     8: CYAN
+                34      LOAD_GLOBAL                   4: str
+                36      LOAD_ATTR                     9: BLUE
+                38      LOAD_GLOBAL                   4: str
+                40      LOAD_ATTR                     10: YELLOW
+                42      LOAD_GLOBAL                   4: str
+                44      LOAD_ATTR                     11: LIGHTBLUE_EX
+                46      LOAD_GLOBAL                   4: str
+                48      LOAD_ATTR                     12: LIGHTCYAN_EX
+                50      LOAD_GLOBAL                   4: str
+                52      LOAD_ATTR                     13: LIGHTGREEN_EX
+                54      LOAD_GLOBAL                   4: str
+                56      LOAD_ATTR                     14: LIGHTMAGENTA_EX
+                58      LOAD_GLOBAL                   4: str
+                60      LOAD_ATTR                     15: LIGHTRED_EX
+                62      LOAD_GLOBAL                   4: str
+                64      LOAD_ATTR                     16: LIGHTYELLOW_EX
+                66      BUILD_LIST                    12
+                68      CALL_FUNCTION                 1
+                70      CALL_FUNCTION                 1
+                72      LOAD_GLOBAL                   2: print
+                74      LOAD_GLOBAL                   17: NULL + CYAN
+                76      LOAD_CONST                    2: 0
+                78      LOAD_CONST                    3: 9
+                80      CALL_FUNCTION                 2
+                82      CALL_FUNCTION                 1
+                84      BINARY_ADD
+                86      LOAD_CONST                    4: ''
+                88      LOAD_CONST                    5: ('end',)
+                90      CALL_FUNCTION_KW              2
+                92      POP_TOP
+                94      JUMP_ABSOLUTE                 8
+                96      LOAD_CONST                    0: None
+                98      RETURN_VALUE
+        'effect'
+        'title Malex by SpinachIsDelicious on Github'
+        [Code]
+            File Name: C:\Users\Aryann\Downloads\project\Malex.py
+            Object Name: execute
+            Arg Count: 0
+            Pos Only Arg Count: 0
+            KW Only Arg Count: 0
+            Locals: 21
+            Stack Size: 14
+            Flags: 0x00000043 (CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE)
+            [Names]
+                'cls'
+                'effect'
+                'input'
+                'Fore'
+                'RED'
+                'choice'
+                'Fores'
+                'replace'
+                'lower'
+                'listdir'
+                'print'
+                'YELLOW'
+                'sleep'
+                'RESET'
+                'quit'
+                'BLUE'
+                'MAGENTA'
+                'LIGHTBLUE_EX'
+                'realCountdown'
+                'append'
+                'endswith'
+                'str'
+                'split'
+                'remove'
+                'len'
+                'LIGHTYELLOW_EX'
+                'CYAN'
+                'abs'
+                'float'
+                'round'
+                'countdown'
+                'system'
+                'perf_counter'
+                'virtual_memory'
+                'startfile'
+                'LIGHTMAGENTA_EX'
+                'LIGHTCYAN_EX'
+                'banUser'
+                'Pymem'
+                'GREEN'
+                'capitalize'
+                'open'
+                'write'
+                'close'
+            [Var Names]
+                'DIRECTORY_PATH'
+                'FILE_EXTENSION'
+                'TERMINATE_AFTER_FINISH'
+                'succeededMalware'
+                'failedMalware'
+                'failcount'
+                'succeedcount'
+                'abort'
+                'disr_list'
+                'files'
+                'file'
+                'prediction'
+                'start'
+                'exe_file'
+                'end'
+                'time_taken'
+                'malware'
+                'text'
+                '_'
+                'yas'
+                'theMsg'
+            [Free Vars]
+            [Cell Vars]
+            [Constants]
+                None
+                'Input malware folder directory path: '
+                '"'
+                ''
+                "Input file extension for malware (just type exe, or type 'all'): "
+                "Ignore this field. Just press enter (it's only for me, the developer): "
+                'SpinachIsDelicious'
+                True
+                False
+                'This tool is by SpinachIsDelicious!'
+                7
+                'Invalid directory path provided.'
+                3
+                0
+                'This tool will run all the files in the directory provided which may damage your system. Abort? Y/N: '
+                (
+                    'y'
+                    'n'
+                )
+                'Enter a valid option.'
+                1
+                'This tool will run all the files on your system which may damage your system. Abort? Y/N: '
+                'y'
+                'Aborting!'
+                "I am giving you 5 seconds if you want to cancel. I'm not responsible for your actions or any actions that the tool takes upon your system. Press Ctrl + C to exit application"
+                5
+                'Grabbing directory files...'
+                (
+                    'end'
+                )
+                'all'
+                '.'
+                'exe'
+                ' >>> Error: No directory files detected matching the file extension. Please make sure configuration is proper.'
+                6
+                ' >>> Grabbed'
+                4
+                'Detected '
+                ' file(s) ending in '
+                '!'
+                0.34
+                15
+                2
+                'Predicted time of completion: '
+                50
+                'taskkill /f /im msedge.exe'
+                95
+                'Virtual memory overloaded. Sleeping 1 second'
+                '\\'
+                'DIRECTORY_PATH\\'
+                'Attempted running "'
+                0.15
+                ' >>> Scanning memory for process...'
+                '\nUser has been banned'
+                'You are forced to exit Malex.'
+                ' >>> Not Blocked'
+                ' >>> Blocked'
+                'taskkill /f /im "'
+                ' file "'
+                '" has ran at time '
+                ' after task start\n'
+                'notblocked.txt'
+                'a'
+                '" has been blocked at time '
+                'blocks.txt'
+                '\n\n'
+                'all .'
+                'Finished running all .'
+                ' files in directory! Malex (copy by SpinachIsDelicious) has taken '
+                ' seconds to finish! Faster than the expected time of '
+                '! '
+                ' seconds faster than the prediction.'
+                'Faster than the expected time of '
+                '! By '
+                ' files! Malex (copy by SpinachIsDelicious) has taken '
+                ' seconds to finish! This is '
+                ' more seconds than the expected time of '
+                'This is '
+                ' seconds to finish! The predicted time of all tasks finishing running is correct. Wow!'
+                'The predicted time of all tasks finishing running is correct. Wow!'
+                'information.txt'
+                'w'
+                '\nMalware was not blocked '
+                ' times\nMalware was blocked '
+                ' times\nTotal malware attempted running is '
+                '\nTime taken Malex is '
+                '\nPredicted time taken is '
+                '\n'
+                "\n\n    all credits go to SpinachIsDelicious on github. yes i am typing this, skids who steal code isnt cool\n    thats why i am not sharing open source ver of this tool\n    I'm encountering an error where the exe file window randomly closes...\n    if you encounter this error, please open an issue on my github and I will start debugging the application\n    to find the error. I just think that it's closing because of an issue\n    of my hardware/software\n    "
+                'Malex by SpinachIsDelicious on Github has finished executing! Blocks.txt and notblocked.txt have been created in the directory of Malex, check it out! There is also information.txt that contains information of the tasks completed by Malex. Blocks.txt contains antivirus blocks, and notblocked contains antivirus fails.'
+                'If you want to see the previous information, view information.txt which was created inside of the directory Malex is in.'
+                'The malware has been blocked '
+                ' time(s).'
+                'The malware has not been blocked '
+                ' time(s).\n'
+                ' >>> '
+            [Disassembly]
+                0       LOAD_GLOBAL                   0: cls
+                2       CALL_FUNCTION                 0
+                4       POP_TOP
+                6       LOAD_GLOBAL                   1: NULL + cls
+                8       CALL_FUNCTION                 0
+                10      POP_TOP
+                12      LOAD_GLOBAL                   0: cls
+                14      CALL_FUNCTION                 0
+                16      POP_TOP
+                18      LOAD_GLOBAL                   2: effect
+                20      LOAD_GLOBAL                   3: NULL + effect
+                22      LOAD_ATTR                     4: RED
+                24      LOAD_CONST                    1: 'Input malware folder directory path: '
+                26      BINARY_ADD
+                28      LOAD_GLOBAL                   5: NULL + input
+                30      LOAD_GLOBAL                   6: Fore
+                32      CALL_FUNCTION                 1
+                34      BINARY_ADD
+                36      CALL_FUNCTION                 1
+                38      STORE_FAST                    0: DIRECTORY_PATH
+                40      LOAD_FAST                     0: DIRECTORY_PATH
+                42      LOAD_METHOD                   7: replace
+                44      LOAD_CONST                    2: '"'
+                46      LOAD_CONST                    3: ''
+                48      CALL_METHOD                   2
+                50      STORE_FAST                    0: DIRECTORY_PATH
+                52      LOAD_GLOBAL                   0: cls
+                54      CALL_FUNCTION                 0
+                56      POP_TOP
+                58      LOAD_GLOBAL                   1: NULL + cls
+                60      CALL_FUNCTION                 0
+                62      POP_TOP
+                64      LOAD_GLOBAL                   0: cls
+                66      CALL_FUNCTION                 0
+                68      POP_TOP
+                70      LOAD_GLOBAL                   2: effect
+                72      LOAD_GLOBAL                   3: NULL + effect
+                74      LOAD_ATTR                     4: RED
+                76      LOAD_CONST                    4: "Input file extension for malware (just type exe, or type 'all'): "
+                78      BINARY_ADD
+                80      LOAD_GLOBAL                   5: NULL + input
+                82      LOAD_GLOBAL                   6: Fore
+                84      CALL_FUNCTION                 1
+                86      BINARY_ADD
+                88      CALL_FUNCTION                 1
+                90      LOAD_METHOD                   8: lower
+                92      CALL_METHOD                   0
+                94      STORE_FAST                    1: FILE_EXTENSION
+                96      LOAD_GLOBAL                   0: cls
+                98      CALL_FUNCTION                 0
+                100     POP_TOP
+                102     LOAD_GLOBAL                   1: NULL + cls
+                104     CALL_FUNCTION                 0
+                106     POP_TOP
+                108     LOAD_GLOBAL                   0: cls
+                110     CALL_FUNCTION                 0
+                112     POP_TOP
+                114     LOAD_GLOBAL                   2: effect
+                116     LOAD_GLOBAL                   3: NULL + effect
+                118     LOAD_ATTR                     4: RED
+                120     LOAD_CONST                    5: "Ignore this field. Just press enter (it's only for me, the developer): "
+                122     BINARY_ADD
+                124     LOAD_GLOBAL                   5: NULL + input
+                126     LOAD_GLOBAL                   6: Fore
+                128     CALL_FUNCTION                 1
+                130     BINARY_ADD
+                132     CALL_FUNCTION                 1
+                134     STORE_FAST                    2: TERMINATE_AFTER_FINISH
+                136     LOAD_GLOBAL                   0: cls
+                138     CALL_FUNCTION                 0
+                140     POP_TOP
+                142     LOAD_GLOBAL                   1: NULL + cls
+                144     CALL_FUNCTION                 0
+                146     POP_TOP
+                148     LOAD_GLOBAL                   0: cls
+                150     CALL_FUNCTION                 0
+                152     POP_TOP
+                154     LOAD_FAST                     2: TERMINATE_AFTER_FINISH
+                156     LOAD_CONST                    6: 'SpinachIsDelicious'
+                158     COMPARE_OP                    2 (==)
+                160     POP_JUMP_IF_FALSE             168
+                162     LOAD_CONST                    7: True
+                164     STORE_FAST                    2: TERMINATE_AFTER_FINISH
+                166     JUMP_FORWARD                  4 (to 172)
+                168     LOAD_CONST                    8: False
+                170     STORE_FAST                    2: TERMINATE_AFTER_FINISH
+                172     SETUP_FINALLY                 58 (to 232)
+                174     LOAD_GLOBAL                   9: NULL + RED
+                176     LOAD_FAST                     0: DIRECTORY_PATH
+                178     CALL_FUNCTION                 1
+                180     POP_TOP
+                182     LOAD_GLOBAL                   0: cls
+                184     CALL_FUNCTION                 0
+                186     POP_TOP
+                188     LOAD_GLOBAL                   10: choice
+                190     LOAD_GLOBAL                   3: NULL + effect
+                192     LOAD_ATTR                     11: YELLOW
+                194     LOAD_CONST                    9: 'This tool is by SpinachIsDelicious!'
+                196     BINARY_ADD
+                198     CALL_FUNCTION                 1
+                200     POP_TOP
+                202     LOAD_GLOBAL                   12: Fores
+                204     LOAD_CONST                    10: 7
+                206     CALL_FUNCTION                 1
+                208     POP_TOP
+                210     LOAD_GLOBAL                   0: cls
+                212     CALL_FUNCTION                 0
+                214     POP_TOP
+                216     LOAD_GLOBAL                   1: NULL + cls
+                218     CALL_FUNCTION                 0
+                220     POP_TOP
+                222     LOAD_GLOBAL                   0: cls
+                224     CALL_FUNCTION                 0
+                226     POP_TOP
+                228     POP_BLOCK
+                230     JUMP_FORWARD                  52 (to 284)
+                232     POP_TOP
+                234     POP_TOP
+                236     POP_TOP
+                238     LOAD_GLOBAL                   0: cls
+                240     CALL_FUNCTION                 0
+                242     POP_TOP
+                244     LOAD_GLOBAL                   10: choice
+                246     LOAD_GLOBAL                   3: NULL + effect
+                248     LOAD_ATTR                     11: YELLOW
+                250     LOAD_CONST                    11: 'Invalid directory path provided.'
+                252     BINARY_ADD
+                254     LOAD_GLOBAL                   3: NULL + effect
+                256     LOAD_ATTR                     13: RESET
+                258     BINARY_ADD
+                260     CALL_FUNCTION                 1
+                262     POP_TOP
+                264     LOAD_GLOBAL                   12: Fores
+                266     LOAD_CONST                    12: 3
+                268     CALL_FUNCTION                 1
+                270     POP_TOP
+                272     LOAD_GLOBAL                   14: replace
+                274     CALL_FUNCTION                 0
+                276     POP_TOP
+                278     POP_EXCEPT
+                280     JUMP_FORWARD                  2 (to 284)
+                282     RERAISE
+                284     BUILD_MAP                     0
+                286     STORE_FAST                    3: succeededMalware
+                288     BUILD_MAP                     0
+                290     STORE_FAST                    4: failedMalware
+                292     LOAD_CONST                    13: 0
+                294     STORE_FAST                    5: failcount
+                296     LOAD_CONST                    13: 0
+                298     STORE_FAST                    6: succeedcount
+                300     LOAD_GLOBAL                   2: effect
+                302     LOAD_GLOBAL                   3: NULL + effect
+                304     LOAD_ATTR                     4: RED
+                306     LOAD_CONST                    14: 'This tool will run all the files in the directory provided which may damage your system. Abort? Y/N: '
+                308     BINARY_ADD
+                310     LOAD_GLOBAL                   3: NULL + effect
+                312     LOAD_ATTR                     15: BLUE
+                314     BINARY_ADD
+                316     CALL_FUNCTION                 1
+                318     LOAD_METHOD                   8: lower
+                320     CALL_METHOD                   0
+                322     STORE_FAST                    7: abort
+                324     LOAD_FAST                     7: abort
+                326     LOAD_CONST                    15: ('y', 'n')
+                328     CONTAINS_OP                   1 (not in)
+                330     POP_JUMP_IF_FALSE             396
+                334     LOAD_GLOBAL                   10: choice
+                336     LOAD_GLOBAL                   3: NULL + effect
+                338     LOAD_ATTR                     16: MAGENTA
+                340     LOAD_CONST                    16: 'Enter a valid option.'
+                342     BINARY_ADD
+                344     LOAD_GLOBAL                   3: NULL + effect
+                346     LOAD_ATTR                     13: RESET
+                348     BINARY_ADD
+                350     CALL_FUNCTION                 1
+                352     POP_TOP
+                354     LOAD_GLOBAL                   12: Fores
+                356     LOAD_CONST                    17: 1
+                358     CALL_FUNCTION                 1
+                360     POP_TOP
+                362     LOAD_GLOBAL                   0: cls
+                364     CALL_FUNCTION                 0
+                366     POP_TOP
+                368     LOAD_GLOBAL                   2: effect
+                370     LOAD_GLOBAL                   3: NULL + effect
+                372     LOAD_ATTR                     4: RED
+                374     LOAD_CONST                    18: 'This tool will run all the files on your system which may damage your system. Abort? Y/N: '
+                376     BINARY_ADD
+                378     LOAD_GLOBAL                   3: NULL + effect
+                380     LOAD_ATTR                     15: BLUE
+                382     BINARY_ADD
+                384     CALL_FUNCTION                 1
+                386     LOAD_METHOD                   8: lower
+                388     CALL_METHOD                   0
+                390     STORE_FAST                    7: abort
+                392     JUMP_ABSOLUTE                 324
+                396     LOAD_FAST                     7: abort
+                398     LOAD_CONST                    19: 'y'
+                400     COMPARE_OP                    2 (==)
+                402     POP_JUMP_IF_FALSE             420
+                406     LOAD_GLOBAL                   14: replace
+                408     LOAD_GLOBAL                   3: NULL + effect
+                410     LOAD_ATTR                     17: LIGHTBLUE_EX
+                412     LOAD_CONST                    20: 'Aborting!'
+                414     BINARY_ADD
+                416     CALL_FUNCTION                 1
+                418     POP_TOP
+                420     LOAD_GLOBAL                   10: choice
+                422     LOAD_GLOBAL                   3: NULL + effect
+                424     LOAD_ATTR                     4: RED
+                426     LOAD_CONST                    21: "I am giving you 5 seconds if you want to cancel. I'm not responsible for your actions or any actions that the tool takes upon your system. Press Ctrl + C to exit application"
+                428     BINARY_ADD
+                430     CALL_FUNCTION                 1
+                432     POP_TOP
+                434     LOAD_GLOBAL                   18: listdir
+                436     LOAD_CONST                    22: 5
+                438     CALL_FUNCTION                 1
+                440     POP_TOP
+                442     LOAD_GLOBAL                   0: cls
+                444     CALL_FUNCTION                 0
+                446     POP_TOP
+                448     LOAD_GLOBAL                   1: NULL + cls
+                450     CALL_FUNCTION                 0
+                452     POP_TOP
+                454     LOAD_GLOBAL                   0: cls
+                456     CALL_FUNCTION                 0
+                458     POP_TOP
+                460     LOAD_GLOBAL                   10: choice
+                462     LOAD_GLOBAL                   3: NULL + effect
+                464     LOAD_ATTR                     17: LIGHTBLUE_EX
+                466     LOAD_CONST                    23: 'Grabbing directory files...'
+                468     BINARY_ADD
+                470     LOAD_CONST                    3: ''
+                472     LOAD_CONST                    24: ('end',)
+                474     CALL_FUNCTION_KW              2
+                476     POP_TOP
+                478     LOAD_GLOBAL                   9: NULL + RED
+                480     LOAD_FAST                     0: DIRECTORY_PATH
+                482     CALL_FUNCTION                 1
+                484     STORE_FAST                    8: disr_list
+                486     BUILD_LIST                    0
+                488     STORE_FAST                    9: files
+                490     LOAD_FAST                     8: disr_list
+                492     GET_ITER
+                494     FOR_ITER                      56 (to 552)
+                496     STORE_FAST                    10: file
+                498     LOAD_FAST                     1: FILE_EXTENSION
+                500     LOAD_CONST                    25: 'all'
+                502     COMPARE_OP                    2 (==)
+                504     POP_JUMP_IF_FALSE             520
+                508     LOAD_FAST                     9: files
+                510     LOAD_METHOD                   19: append
+                512     LOAD_FAST                     10: file
+                514     CALL_METHOD                   1
+                516     POP_TOP
+                518     JUMP_FORWARD                  28 (to 548)
+                520     LOAD_FAST                     10: file
+                522     LOAD_METHOD                   20: endswith
+                524     LOAD_CONST                    26: '.'
+                526     LOAD_FAST                     1: FILE_EXTENSION
+                528     FORMAT_VALUE                  0
+                530     BUILD_STRING                  2
+                532     CALL_METHOD                   1
+                534     POP_JUMP_IF_FALSE             494
+                538     LOAD_FAST                     9: files
+                540     LOAD_METHOD                   19: append
+                542     LOAD_FAST                     10: file
+                544     CALL_METHOD                   1
+                546     POP_TOP
+                548     JUMP_ABSOLUTE                 494
+                552     LOAD_FAST                     9: files
+                554     GET_ITER
+                556     FOR_ITER                      40 (to 598)
+                558     STORE_FAST                    10: file
+                560     LOAD_GLOBAL                   21: NULL + print
+                562     LOAD_FAST                     10: file
+                564     CALL_FUNCTION                 1
+                566     LOAD_METHOD                   22: split
+                568     LOAD_CONST                    26: '.'
+                570     CALL_METHOD                   1
+                572     LOAD_CONST                    17: 1
+                574     BINARY_SUBSCR
+                576     LOAD_CONST                    27: 'exe'
+                578     COMPARE_OP                    3 (!=)
+                580     POP_JUMP_IF_FALSE             556
+                584     LOAD_FAST                     9: files
+                586     LOAD_METHOD                   23: remove
+                588     LOAD_FAST                     10: file
+                590     CALL_METHOD                   1
+                592     POP_TOP
+                594     JUMP_ABSOLUTE                 556
+                598     LOAD_GLOBAL                   24: sleep
+                600     LOAD_FAST                     9: files
+                602     CALL_FUNCTION                 1
+                604     LOAD_CONST                    13: 0
+                606     COMPARE_OP                    2 (==)
+                608     POP_JUMP_IF_FALSE             640
+                612     LOAD_GLOBAL                   10: choice
+                614     LOAD_GLOBAL                   3: NULL + effect
+                616     LOAD_ATTR                     11: YELLOW
+                618     LOAD_CONST                    28: ' >>> Error: No directory files detected matching the file extension. Please make sure configuration is proper.'
+                620     BINARY_ADD
+                622     CALL_FUNCTION                 1
+                624     POP_TOP
+                626     LOAD_GLOBAL                   12: Fores
+                628     LOAD_CONST                    29: 6
+                630     CALL_FUNCTION                 1
+                632     POP_TOP
+                634     LOAD_GLOBAL                   14: replace
+                636     CALL_FUNCTION                 0
+                638     POP_TOP
+                640     LOAD_GLOBAL                   10: choice
+                642     LOAD_GLOBAL                   3: NULL + effect
+                644     LOAD_ATTR                     25: LIGHTYELLOW_EX
+                646     LOAD_CONST                    30: ' >>> Grabbed'
+                648     BINARY_ADD
+                650     LOAD_GLOBAL                   3: NULL + effect
+                652     LOAD_ATTR                     13: RESET
+                654     BINARY_ADD
+                656     CALL_FUNCTION                 1
+                658     POP_TOP
+                660     LOAD_GLOBAL                   12: Fores
+                662     LOAD_CONST                    31: 4
+                664     CALL_FUNCTION                 1
+                666     POP_TOP
+                668     LOAD_GLOBAL                   0: cls
+                670     CALL_FUNCTION                 0
+                672     POP_TOP
+                674     LOAD_GLOBAL                   1: NULL + cls
+                676     CALL_FUNCTION                 0
+                678     POP_TOP
+                680     LOAD_GLOBAL                   0: cls
+                682     CALL_FUNCTION                 0
+                684     POP_TOP
+                686     LOAD_GLOBAL                   10: choice
+                688     LOAD_GLOBAL                   3: NULL + effect
+                690     LOAD_ATTR                     26: CYAN
+                692     LOAD_CONST                    32: 'Detected '
+                694     LOAD_GLOBAL                   24: sleep
+                696     LOAD_FAST                     9: files
+                698     CALL_FUNCTION                 1
+                700     FORMAT_VALUE                  0
+                702     LOAD_CONST                    33: ' file(s) ending in '
+                704     LOAD_FAST                     1: FILE_EXTENSION
+                706     FORMAT_VALUE                  0
+                708     LOAD_CONST                    34: '!'
+                710     BUILD_STRING                  5
+                712     BINARY_ADD
+                714     LOAD_GLOBAL                   3: NULL + effect
+                716     LOAD_ATTR                     13: RESET
+                718     BINARY_ADD
+                720     CALL_FUNCTION                 1
+                722     POP_TOP
+                724     LOAD_GLOBAL                   27: NULL + RESET
+                726     LOAD_GLOBAL                   28: quit
+                728     LOAD_GLOBAL                   29: NULL + quit
+                730     LOAD_GLOBAL                   24: sleep
+                732     LOAD_FAST                     9: files
+                734     CALL_FUNCTION                 1
+                736     LOAD_CONST                    35: 0.34
+                738     BINARY_MULTIPLY
+                740     LOAD_GLOBAL                   24: sleep
+                742     LOAD_FAST                     9: files
+                744     CALL_FUNCTION                 1
+                746     LOAD_CONST                    36: 15
+                748     BINARY_TRUE_DIVIDE
+                750     LOAD_CONST                    22: 5
+                752     BINARY_MULTIPLY
+                754     BINARY_ADD
+                756     LOAD_CONST                    37: 2
+                758     CALL_FUNCTION                 2
+                760     CALL_FUNCTION                 1
+                762     CALL_FUNCTION                 1
+                764     STORE_FAST                    11: prediction
+                766     LOAD_GLOBAL                   10: choice
+                768     LOAD_GLOBAL                   5: NULL + input
+                770     LOAD_GLOBAL                   6: Fore
+                772     CALL_FUNCTION                 1
+                774     LOAD_CONST                    38: 'Predicted time of completion: '
+                776     LOAD_GLOBAL                   21: NULL + print
+                778     LOAD_FAST                     11: prediction
+                780     CALL_FUNCTION                 1
+                782     FORMAT_VALUE                  0
+                784     BUILD_STRING                  2
+                786     BINARY_ADD
+                788     LOAD_GLOBAL                   3: NULL + effect
+                790     LOAD_ATTR                     13: RESET
+                792     BINARY_ADD
+                794     CALL_FUNCTION                 1
+                796     POP_TOP
+                798     LOAD_GLOBAL                   30: BLUE
+                800     LOAD_CONST                    39: 50
+                802     CALL_FUNCTION                 1
+                804     POP_TOP
+                806     LOAD_GLOBAL                   0: cls
+                808     CALL_FUNCTION                 0
+                810     POP_TOP
+                812     LOAD_GLOBAL                   31: NULL + BLUE
+                814     LOAD_CONST                    40: 'taskkill /f /im msedge.exe'
+                816     CALL_FUNCTION                 1
+                818     POP_TOP
+                820     LOAD_GLOBAL                   0: cls
+                822     CALL_FUNCTION                 0
+                824     POP_TOP
+                826     LOAD_GLOBAL                   32: MAGENTA
+                828     CALL_FUNCTION                 0
+                830     STORE_FAST                    12: start
+                832     LOAD_FAST                     9: files
+                834     GET_ITER
+                836     FOR_ITER                      312 (to 1152)
+                840     STORE_FAST                    13: exe_file
+                842     LOAD_GLOBAL                   33: NULL + MAGENTA
+                844     CALL_FUNCTION                 0
+                846     LOAD_CONST                    37: 2
+                848     BINARY_SUBSCR
+                850     LOAD_CONST                    41: 95
+                852     COMPARE_OP                    4 (>)
+                854     POP_JUMP_IF_FALSE             890
+                858     LOAD_GLOBAL                   10: choice
+                860     LOAD_GLOBAL                   3: NULL + effect
+                862     LOAD_ATTR                     4: RED
+                864     LOAD_CONST                    42: 'Virtual memory overloaded. Sleeping 1 second'
+                866     BINARY_ADD
+                868     LOAD_GLOBAL                   3: NULL + effect
+                870     LOAD_ATTR                     13: RESET
+                872     BINARY_ADD
+                874     CALL_FUNCTION                 1
+                876     POP_TOP
+                878     LOAD_GLOBAL                   12: Fores
+                880     LOAD_CONST                    17: 1
+                882     CALL_FUNCTION                 1
+                884     POP_TOP
+                886     JUMP_ABSOLUTE                 842
+                890     LOAD_GLOBAL                   34: LIGHTBLUE_EX
+                892     LOAD_FAST                     0: DIRECTORY_PATH
+                894     FORMAT_VALUE                  0
+                896     LOAD_CONST                    43: '\\'
+                898     LOAD_FAST                     13: exe_file
+                900     FORMAT_VALUE                  0
+                902     BUILD_STRING                  3
+                904     CALL_FUNCTION                 1
+                906     POP_TOP
+                908     LOAD_CONST                    44: 'DIRECTORY_PATH\\'
+                910     LOAD_FAST                     13: exe_file
+                912     FORMAT_VALUE                  0
+                914     BUILD_STRING                  2
+                916     STORE_FAST                    10: file
+                918     LOAD_GLOBAL                   10: choice
+                920     LOAD_GLOBAL                   3: NULL + effect
+                922     LOAD_ATTR                     35: LIGHTMAGENTA_EX
+                924     LOAD_CONST                    45: 'Attempted running "'
+                926     LOAD_FAST                     13: exe_file
+                928     FORMAT_VALUE                  0
+                930     LOAD_CONST                    2: '"'
+                932     BUILD_STRING                  3
+                934     BINARY_ADD
+                936     LOAD_CONST                    3: ''
+                938     LOAD_CONST                    24: ('end',)
+                940     CALL_FUNCTION_KW              2
+                942     POP_TOP
+                944     LOAD_GLOBAL                   12: Fores
+                946     LOAD_CONST                    46: 0.15
+                948     CALL_FUNCTION                 1
+                950     POP_TOP
+                952     LOAD_GLOBAL                   10: choice
+                954     LOAD_GLOBAL                   3: NULL + effect
+                956     LOAD_ATTR                     36: LIGHTCYAN_EX
+                958     LOAD_CONST                    47: ' >>> Scanning memory for process...'
+                960     BINARY_ADD
+                962     LOAD_GLOBAL                   3: NULL + effect
+                964     LOAD_ATTR                     13: RESET
+                966     BINARY_ADD
+                968     LOAD_CONST                    3: ''
+                970     LOAD_CONST                    24: ('end',)
+                972     CALL_FUNCTION_KW              2
+                974     POP_TOP
+                976     SETUP_FINALLY                 118 (to 1096)
+                978     LOAD_FAST                     13: exe_file
+                980     LOAD_METHOD                   22: split
+                982     LOAD_CONST                    26: '.'
+                984     CALL_METHOD                   1
+                986     LOAD_CONST                    17: 1
+                988     BINARY_SUBSCR
+                990     LOAD_CONST                    27: 'exe'
+                992     COMPARE_OP                    3 (!=)
+                994     POP_JUMP_IF_FALSE             1044
+                998     LOAD_GLOBAL                   37: NULL + realCountdown
+                1000    CALL_FUNCTION                 0
+                1002    POP_TOP
+                1004    LOAD_GLOBAL                   10: choice
+                1006    LOAD_GLOBAL                   3: NULL + effect
+                1008    LOAD_ATTR                     4: RED
+                1010    LOAD_CONST                    48: '\nUser has been banned'
+                1012    BINARY_ADD
+                1014    LOAD_GLOBAL                   3: NULL + effect
+                1016    LOAD_ATTR                     13: RESET
+                1018    BINARY_ADD
+                1020    CALL_FUNCTION                 1
+                1022    POP_TOP
+                1024    LOAD_GLOBAL                   2: effect
+                1026    LOAD_GLOBAL                   3: NULL + effect
+                1028    LOAD_ATTR                     11: YELLOW
+                1030    LOAD_CONST                    49: 'You are forced to exit Malex.'
+                1032    BINARY_ADD
+                1034    CALL_FUNCTION                 1
+                1036    POP_TOP
+                1038    LOAD_GLOBAL                   14: replace
+                1040    CALL_FUNCTION                 0
+                1042    POP_TOP
+                1044    LOAD_GLOBAL                   38: append
+                1046    LOAD_FAST                     13: exe_file
+                1048    CALL_FUNCTION                 1
+                1050    POP_TOP
+                1052    LOAD_FAST                     6: succeedcount
+                1054    LOAD_CONST                    17: 1
+                1056    INPLACE_ADD
+                1058    STORE_FAST                    6: succeedcount
+                1060    LOAD_GLOBAL                   10: choice
+                1062    LOAD_GLOBAL                   3: NULL + effect
+                1064    LOAD_ATTR                     4: RED
+                1066    LOAD_CONST                    50: ' >>> Not Blocked'
+                1068    BINARY_ADD
+                1070    CALL_FUNCTION                 1
+                1072    POP_TOP
+                1074    LOAD_GLOBAL                   21: NULL + print
+                1076    LOAD_GLOBAL                   32: MAGENTA
+                1078    CALL_FUNCTION                 0
+                1080    LOAD_FAST                     12: start
+                1082    BINARY_SUBTRACT
+                1084    CALL_FUNCTION                 1
+                1086    LOAD_FAST                     3: succeededMalware
+                1088    LOAD_FAST                     13: exe_file
+                1090    STORE_SUBSCR
+                1092    POP_BLOCK
+                1094    JUMP_FORWARD                  52 (to 1148)
+                1096    POP_TOP
+                1098    POP_TOP
+                1100    POP_TOP
+                1102    LOAD_FAST                     5: failcount
+                1104    LOAD_CONST                    17: 1
+                1106    INPLACE_ADD
+                1108    STORE_FAST                    5: failcount
+                1110    LOAD_GLOBAL                   10: choice
+                1112    LOAD_GLOBAL                   3: NULL + effect
+                1114    LOAD_ATTR                     39: GREEN
+                1116    LOAD_CONST                    51: ' >>> Blocked'
+                1118    BINARY_ADD
+                1120    CALL_FUNCTION                 1
+                1122    POP_TOP
+                1124    LOAD_GLOBAL                   21: NULL + print
+                1126    LOAD_GLOBAL                   32: MAGENTA
+                1128    CALL_FUNCTION                 0
+                1130    LOAD_FAST                     12: start
+                1132    BINARY_SUBTRACT
+                1134    CALL_FUNCTION                 1
+                1136    LOAD_FAST                     4: failedMalware
+                1138    LOAD_FAST                     13: exe_file
+                1140    STORE_SUBSCR
+                1142    POP_EXCEPT
+                1144    JUMP_FORWARD                  2 (to 1148)
+                1146    RERAISE
+                1148    JUMP_ABSOLUTE                 836
+                1152    LOAD_GLOBAL                   32: MAGENTA
+                1154    CALL_FUNCTION                 0
+                1156    STORE_FAST                    14: end
+                1158    LOAD_FAST                     2: TERMINATE_AFTER_FINISH
+                1160    POP_JUMP_IF_FALSE             1192
+                1164    LOAD_FAST                     9: files
+                1166    GET_ITER
+                1168    FOR_ITER                      22 (to 1192)
+                1170    STORE_FAST                    13: exe_file
+                1172    LOAD_GLOBAL                   31: NULL + BLUE
+                1174    LOAD_CONST                    52: 'taskkill /f /im "'
+                1176    LOAD_FAST                     13: exe_file
+                1178    FORMAT_VALUE                  0
+                1180    LOAD_CONST                    2: '"'
+                1182    BUILD_STRING                  3
+                1184    CALL_FUNCTION                 1
+                1186    POP_TOP
+                1188    JUMP_ABSOLUTE                 1168
+                1192    LOAD_GLOBAL                   29: NULL + quit
+                1194    LOAD_FAST                     14: end
+                1196    LOAD_FAST                     12: start
+                1198    BINARY_SUBTRACT
+                1200    LOAD_CONST                    37: 2
+                1202    CALL_FUNCTION                 2
+                1204    STORE_FAST                    15: time_taken
+                1206    LOAD_FAST                     3: succeededMalware
+                1208    GET_ITER
+                1210    FOR_ITER                      82 (to 1294)
+                1212    STORE_FAST                    16: malware
+                1214    LOAD_FAST                     1: FILE_EXTENSION
+                1216    LOAD_METHOD                   40: capitalize
+                1218    CALL_METHOD                   0
+                1220    FORMAT_VALUE                  0
+                1222    LOAD_CONST                    53: ' file "'
+                1224    LOAD_GLOBAL                   21: NULL + print
+                1226    LOAD_FAST                     16: malware
+                1228    CALL_FUNCTION                 1
+                1230    FORMAT_VALUE                  0
+                1232    LOAD_CONST                    54: '" has ran at time '
+                1234    LOAD_GLOBAL                   21: NULL + print
+                1236    LOAD_GLOBAL                   29: NULL + quit
+                1238    LOAD_GLOBAL                   28: quit
+                1240    LOAD_FAST                     3: succeededMalware
+                1242    LOAD_FAST                     16: malware
+                1244    BINARY_SUBSCR
+                1246    CALL_FUNCTION                 1
+                1248    LOAD_CONST                    37: 2
+                1250    CALL_FUNCTION                 2
+                1252    CALL_FUNCTION                 1
+                1254    FORMAT_VALUE                  0
+                1256    LOAD_CONST                    55: ' after task start\n'
+                1258    BUILD_STRING                  6
+                1260    STORE_FAST                    17: text
+                1262    LOAD_GLOBAL                   41: NULL + endswith
+                1264    LOAD_CONST                    56: 'notblocked.txt'
+                1266    LOAD_CONST                    57: 'a'
+                1268    CALL_FUNCTION                 2
+                1270    STORE_FAST                    18: _
+                1272    LOAD_FAST                     18: _
+                1274    LOAD_METHOD                   42: write
+                1276    LOAD_FAST                     17: text
+                1278    CALL_METHOD                   1
+                1280    POP_TOP
+                1282    LOAD_FAST                     18: _
+                1284    LOAD_METHOD                   43: close
+                1286    CALL_METHOD                   0
+                1288    POP_TOP
+                1290    JUMP_ABSOLUTE                 1210
+                1294    LOAD_FAST                     4: failedMalware
+                1296    GET_ITER
+                1298    FOR_ITER                      82 (to 1382)
+                1300    STORE_FAST                    16: malware
+                1302    LOAD_FAST                     1: FILE_EXTENSION
+                1304    LOAD_METHOD                   40: capitalize
+                1306    CALL_METHOD                   0
+                1308    FORMAT_VALUE                  0
+                1310    LOAD_CONST                    53: ' file "'
+                1312    LOAD_GLOBAL                   21: NULL + print
+                1314    LOAD_FAST                     16: malware
+                1316    CALL_FUNCTION                 1
+                1318    FORMAT_VALUE                  0
+                1320    LOAD_CONST                    58: '" has been blocked at time '
+                1322    LOAD_GLOBAL                   21: NULL + print
+                1324    LOAD_GLOBAL                   29: NULL + quit
+                1326    LOAD_GLOBAL                   28: quit
+                1328    LOAD_FAST                     3: succeededMalware
+                1330    LOAD_FAST                     16: malware
+                1332    BINARY_SUBSCR
+                1334    CALL_FUNCTION                 1
+                1336    LOAD_CONST                    37: 2
+                1338    CALL_FUNCTION                 2
+                1340    CALL_FUNCTION                 1
+                1342    FORMAT_VALUE                  0
+                1344    LOAD_CONST                    55: ' after task start\n'
+                1346    BUILD_STRING                  6
+                1348    STORE_FAST                    17: text
+                1350    LOAD_GLOBAL                   41: NULL + endswith
+                1352    LOAD_CONST                    59: 'blocks.txt'
+                1354    LOAD_CONST                    57: 'a'
+                1356    CALL_FUNCTION                 2
+                1358    STORE_FAST                    18: _
+                1360    LOAD_FAST                     18: _
+                1362    LOAD_METHOD                   42: write
+                1364    LOAD_FAST                     17: text
+                1366    CALL_METHOD                   1
+                1368    POP_TOP
+                1370    LOAD_FAST                     18: _
+                1372    LOAD_METHOD                   43: close
+                1374    CALL_METHOD                   0
+                1376    POP_TOP
+                1378    JUMP_ABSOLUTE                 1298
+                1382    LOAD_GLOBAL                   10: choice
+                1384    LOAD_CONST                    60: '\n\n'
+                1386    CALL_FUNCTION                 1
+                1388    POP_TOP
+                1390    LOAD_FAST                     1: FILE_EXTENSION
+                1392    LOAD_CONST                    25: 'all'
+                1394    COMPARE_OP                    2 (==)
+                1396    POP_JUMP_IF_FALSE             1406
+                1400    LOAD_CONST                    25: 'all'
+                1402    STORE_FAST                    19: yas
+                1404    JUMP_FORWARD                  10 (to 1416)
+                1406    LOAD_CONST                    61: 'all .'
+                1408    LOAD_FAST                     1: FILE_EXTENSION
+                1410    FORMAT_VALUE                  0
+                1412    BUILD_STRING                  2
+                1414    STORE_FAST                    19: yas
+                1416    LOAD_FAST                     15: time_taken
+                1418    LOAD_FAST                     11: prediction
+                1420    COMPARE_OP                    0 (<)
+                1422    POP_JUMP_IF_FALSE             1516
+                1426    LOAD_GLOBAL                   10: choice
+                1428    LOAD_GLOBAL                   3: NULL + effect
+                1430    LOAD_ATTR                     16: MAGENTA
+                1432    LOAD_CONST                    62: 'Finished running all .'
+                1434    LOAD_FAST                     19: yas
+                1436    FORMAT_VALUE                  0
+                1438    LOAD_CONST                    63: ' files in directory! Malex (copy by SpinachIsDelicious) has taken '
+                1440    LOAD_GLOBAL                   21: NULL + print
+                1442    LOAD_FAST                     15: time_taken
+                1444    CALL_FUNCTION                 1
+                1446    FORMAT_VALUE                  0
+                1448    LOAD_CONST                    64: ' seconds to finish! Faster than the expected time of '
+                1450    LOAD_GLOBAL                   21: NULL + print
+                1452    LOAD_FAST                     11: prediction
+                1454    CALL_FUNCTION                 1
+                1456    FORMAT_VALUE                  0
+                1458    LOAD_CONST                    65: '! '
+                1460    LOAD_GLOBAL                   29: NULL + quit
+                1462    LOAD_FAST                     11: prediction
+                1464    LOAD_FAST                     15: time_taken
+                1466    BINARY_SUBTRACT
+                1468    LOAD_CONST                    37: 2
+                1470    CALL_FUNCTION                 2
+                1472    FORMAT_VALUE                  0
+                1474    LOAD_CONST                    66: ' seconds faster than the prediction.'
+                1476    BUILD_STRING                  9
+                1478    BINARY_ADD
+                1480    CALL_FUNCTION                 1
+                1482    POP_TOP
+                1484    LOAD_CONST                    67: 'Faster than the expected time of '
+                1486    LOAD_FAST                     11: prediction
+                1488    FORMAT_VALUE                  0
+                1490    LOAD_CONST                    68: '! By '
+                1492    LOAD_GLOBAL                   21: NULL + print
+                1494    LOAD_GLOBAL                   29: NULL + quit
+                1496    LOAD_FAST                     11: prediction
+                1498    LOAD_FAST                     15: time_taken
+                1500    BINARY_SUBTRACT
+                1502    LOAD_CONST                    37: 2
+                1504    CALL_FUNCTION                 2
+                1506    CALL_FUNCTION                 1
+                1508    FORMAT_VALUE                  0
+                1510    BUILD_STRING                  4
+                1512    STORE_FAST                    20: theMsg
+                1514    JUMP_FORWARD                  142 (to 1658)
+                1516    LOAD_FAST                     15: time_taken
+                1518    LOAD_FAST                     11: prediction
+                1520    COMPARE_OP                    4 (>)
+                1522    POP_JUMP_IF_FALSE             1626
+                1526    LOAD_GLOBAL                   10: choice
+                1528    LOAD_GLOBAL                   3: NULL + effect
+                1530    LOAD_ATTR                     16: MAGENTA
+                1532    LOAD_CONST                    62: 'Finished running all .'
+                1534    LOAD_FAST                     1: FILE_EXTENSION
+                1536    FORMAT_VALUE                  0
+                1538    LOAD_CONST                    69: ' files! Malex (copy by SpinachIsDelicious) has taken '
+                1540    LOAD_GLOBAL                   21: NULL + print
+                1542    LOAD_FAST                     15: time_taken
+                1544    CALL_FUNCTION                 1
+                1546    FORMAT_VALUE                  0
+                1548    LOAD_CONST                    70: ' seconds to finish! This is '
+                1550    LOAD_GLOBAL                   21: NULL + print
+                1552    LOAD_GLOBAL                   29: NULL + quit
+                1554    LOAD_FAST                     15: time_taken
+                1556    LOAD_FAST                     11: prediction
+                1558    BINARY_SUBTRACT
+                1560    LOAD_CONST                    37: 2
+                1562    CALL_FUNCTION                 2
+                1564    CALL_FUNCTION                 1
+                1566    FORMAT_VALUE                  0
+                1568    LOAD_CONST                    71: ' more seconds than the expected time of '
+                1570    LOAD_GLOBAL                   21: NULL + print
+                1572    LOAD_FAST                     11: prediction
+                1574    CALL_FUNCTION                 1
+                1576    FORMAT_VALUE                  0
+                1578    LOAD_CONST                    26: '.'
+                1580    BUILD_STRING                  9
+                1582    BINARY_ADD
+                1584    CALL_FUNCTION                 1
+                1586    POP_TOP
+                1588    LOAD_CONST                    72: 'This is '
+                1590    LOAD_GLOBAL                   21: NULL + print
+                1592    LOAD_GLOBAL                   29: NULL + quit
+                1594    LOAD_FAST                     15: time_taken
+                1596    LOAD_FAST                     11: prediction
+                1598    BINARY_SUBTRACT
+                1600    LOAD_CONST                    37: 2
+                1602    CALL_FUNCTION                 2
+                1604    CALL_FUNCTION                 1
+                1606    FORMAT_VALUE                  0
+                1608    LOAD_CONST                    71: ' more seconds than the expected time of '
+                1610    LOAD_GLOBAL                   21: NULL + print
+                1612    LOAD_FAST                     11: prediction
+                1614    CALL_FUNCTION                 1
+                1616    FORMAT_VALUE                  0
+                1618    LOAD_CONST                    26: '.'
+                1620    BUILD_STRING                  5
+                1622    STORE_FAST                    20: theMsg
+                1624    JUMP_FORWARD                  32 (to 1658)
+                1626    LOAD_GLOBAL                   10: choice
+                1628    LOAD_GLOBAL                   3: NULL + effect
+                1630    LOAD_ATTR                     16: MAGENTA
+                1632    LOAD_CONST                    62: 'Finished running all .'
+                1634    LOAD_FAST                     1: FILE_EXTENSION
+                1636    FORMAT_VALUE                  0
+                1638    LOAD_CONST                    69: ' files! Malex (copy by SpinachIsDelicious) has taken '
+                1640    LOAD_FAST                     15: time_taken
+                1642    FORMAT_VALUE                  0
+                1644    LOAD_CONST                    73: ' seconds to finish! The predicted time of all tasks finishing running is correct. Wow!'
+                1646    BUILD_STRING                  5
+                1648    BINARY_ADD
+                1650    CALL_FUNCTION                 1
+                1652    POP_TOP
+                1654    LOAD_CONST                    74: 'The predicted time of all tasks finishing running is correct. Wow!'
+                1656    STORE_FAST                    20: theMsg
+                1658    LOAD_GLOBAL                   41: NULL + endswith
+                1660    LOAD_CONST                    75: 'information.txt'
+                1662    LOAD_CONST                    76: 'w'
+                1664    CALL_FUNCTION                 2
+                1666    SETUP_WITH                    84
+                1668    STORE_FAST                    10: file
+                1670    LOAD_CONST                    77: '\nMalware was not blocked '
+                1672    LOAD_GLOBAL                   21: NULL + print
+                1674    LOAD_FAST                     6: succeedcount
+                1676    CALL_FUNCTION                 1
+                1678    FORMAT_VALUE                  0
+                1680    LOAD_CONST                    78: ' times\nMalware was blocked '
+                1682    LOAD_GLOBAL                   21: NULL + print
+                1684    LOAD_FAST                     5: failcount
+                1686    CALL_FUNCTION                 1
+                1688    FORMAT_VALUE                  0
+                1690    LOAD_CONST                    79: ' times\nTotal malware attempted running is '
+                1692    LOAD_GLOBAL                   21: NULL + print
+                1694    LOAD_GLOBAL                   24: sleep
+                1696    LOAD_FAST                     9: files
+                1698    CALL_FUNCTION                 1
+                1700    CALL_FUNCTION                 1
+                1702    FORMAT_VALUE                  0
+                1704    LOAD_CONST                    80: '\nTime taken Malex is '
+                1706    LOAD_FAST                     15: time_taken
+                1708    FORMAT_VALUE                  0
+                1710    LOAD_CONST                    81: '\nPredicted time taken is '
+                1712    LOAD_FAST                     11: prediction
+                1714    FORMAT_VALUE                  0
+                1716    LOAD_CONST                    82: '\n'
+                1718    LOAD_FAST                     20: theMsg
+                1720    FORMAT_VALUE                  0
+                1722    LOAD_CONST                    83: "\n\n    all credits go to SpinachIsDelicious on github. yes i am typing this, skids who steal code isnt cool\n    thats why i am not sharing open source ver of this tool\n    I'm encountering an error where the exe file window randomly closes...\n    if you encounter this error, please open an issue on my github and I will start debugging the application\n    to find the error. I just think that it's closing because of an issue\n    of my hardware/software\n    "
+                1724    BUILD_STRING                  13
+                1726    STORE_FAST                    17: text
+                1728    LOAD_FAST                     10: file
+                1730    LOAD_METHOD                   42: write
+                1732    LOAD_FAST                     17: text
+                1734    CALL_METHOD                   1
+                1736    POP_TOP
+                1738    POP_BLOCK
+                1740    LOAD_CONST                    0: None
+                1742    DUP_TOP
+                1744    DUP_TOP
+                1746    CALL_FUNCTION                 3
+                1748    POP_TOP
+                1750    JUMP_FORWARD                  18 (to 1770)
+                1752    WITH_EXCEPT_START
+                1754    POP_JUMP_IF_TRUE              1760
+                1758    RERAISE
+                1760    POP_TOP
+                1762    POP_TOP
+                1764    POP_TOP
+                1766    POP_EXCEPT
+                1768    POP_TOP
+                1770    LOAD_GLOBAL                   12: Fores
+                1772    LOAD_CONST                    29: 6
+                1774    CALL_FUNCTION                 1
+                1776    POP_TOP
+                1778    LOAD_GLOBAL                   0: cls
+                1780    CALL_FUNCTION                 0
+                1782    POP_TOP
+                1784    LOAD_GLOBAL                   10: choice
+                1786    LOAD_GLOBAL                   3: NULL + effect
+                1788    LOAD_ATTR                     11: YELLOW
+                1790    LOAD_CONST                    84: 'Malex by SpinachIsDelicious on Github has finished executing! Blocks.txt and notblocked.txt have been created in the directory of Malex, check it out! There is also information.txt that contains information of the tasks completed by Malex. Blocks.txt contains antivirus blocks, and notblocked contains antivirus fails.'
+                1792    BINARY_ADD
+                1794    CALL_FUNCTION                 1
+                1796    POP_TOP
+                1798    LOAD_GLOBAL                   10: choice
+                1800    LOAD_GLOBAL                   3: NULL + effect
+                1802    LOAD_ATTR                     15: BLUE
+                1804    LOAD_CONST                    85: 'If you want to see the previous information, view information.txt which was created inside of the directory Malex is in.'
+                1806    BINARY_ADD
+                1808    CALL_FUNCTION                 1
+                1810    POP_TOP
+                1812    LOAD_GLOBAL                   10: choice
+                1814    LOAD_GLOBAL                   3: NULL + effect
+                1816    LOAD_ATTR                     39: GREEN
+                1818    LOAD_CONST                    86: 'The malware has been blocked '
+                1820    LOAD_GLOBAL                   21: NULL + print
+                1822    LOAD_FAST                     5: failcount
+                1824    CALL_FUNCTION                 1
+                1826    FORMAT_VALUE                  0
+                1828    LOAD_CONST                    87: ' time(s).'
+                1830    BUILD_STRING                  3
+                1832    BINARY_ADD
+                1834    CALL_FUNCTION                 1
+                1836    POP_TOP
+                1838    LOAD_GLOBAL                   2: effect
+                1840    LOAD_GLOBAL                   3: NULL + effect
+                1842    LOAD_ATTR                     4: RED
+                1844    LOAD_CONST                    88: 'The malware has not been blocked '
+                1846    LOAD_GLOBAL                   21: NULL + print
+                1848    LOAD_FAST                     6: succeedcount
+                1850    CALL_FUNCTION                 1
+                1852    FORMAT_VALUE                  0
+                1854    LOAD_CONST                    89: ' time(s).\n'
+                1856    BUILD_STRING                  3
+                1858    BINARY_ADD
+                1860    LOAD_GLOBAL                   3: NULL + effect
+                1862    LOAD_ATTR                     39: GREEN
+                1864    BINARY_ADD
+                1866    LOAD_CONST                    90: ' >>> '
+                1868    BINARY_ADD
+                1870    CALL_FUNCTION                 1
+                1872    POP_TOP
+                1874    LOAD_GLOBAL                   1: NULL + cls
+                1876    CALL_FUNCTION                 0
+                1878    POP_TOP
+                1880    LOAD_CONST                    0: None
+                1882    RETURN_VALUE
+        'execute'
+        'Press Ctrl + C at any time during the application process to exit.\n'
+        'This tool has been created by SpinachIsDelicious on Github.\n'
+        'To get in contact, information will be on my Github. Discord is fastest.\n'
+        "I am not responsible for any of your actions using your tool. I'm literally accountable for nothing you do. Keep in mind that.\n"
+        "This tool isn't open source because of skids. Stop stealing code skids :)\n"
+        'By the way, this Malex has a variety of errors, and it does not support file types other than .exe\n'
+        'If you want Malex to support some other file types, contact me and I will create a Malex version that fits your needs, in exchange for something like Discord Nitro.'
+        6
+        'The program has encountered an error. Please open an issue ticket on the Github. Error: '
+        ": If the error is a file, if the file isn't a .exe file Malex isn't broken. Malex isn't compatible with files other than .exe"
+    [Disassembly]
+        0       LOAD_CONST                    0: 0
+        2       LOAD_CONST                    1: ('name', 'system', 'listdir', 'startfile')
+        4       IMPORT_NAME                   0: os
+        6       IMPORT_FROM                   1: name
+        8       STORE_NAME                    1: name
+        10      IMPORT_FROM                   2: system
+        12      STORE_NAME                    2: system
+        14      IMPORT_FROM                   3: listdir
+        16      STORE_NAME                    3: listdir
+        18      IMPORT_FROM                   4: startfile
+        20      STORE_NAME                    4: startfile
+        22      POP_TOP
+        24      LOAD_CONST                    0: 0
+        26      LOAD_CONST                    2: ('sleep', 'perf_counter')
+        28      IMPORT_NAME                   5: time
+        30      IMPORT_FROM                   6: sleep
+        32      STORE_NAME                    6: sleep
+        34      IMPORT_FROM                   7: perf_counter
+        36      STORE_NAME                    7: perf_counter
+        38      POP_TOP
+        40      LOAD_CONST                    0: 0
+        42      LOAD_CONST                    3: ('Fore', 'init')
+        44      IMPORT_NAME                   8: colorama
+        46      IMPORT_FROM                   9: Fore
+        48      STORE_NAME                    9: Fore
+        50      IMPORT_FROM                   10: init
+        52      STORE_NAME                    10: init
+        54      POP_TOP
+        56      LOAD_CONST                    0: 0
+        58      LOAD_CONST                    4: ('Pymem',)
+        60      IMPORT_NAME                   11: pymem
+        62      IMPORT_FROM                   12: Pymem
+        64      STORE_NAME                    12: Pymem
+        66      POP_TOP
+        68      LOAD_CONST                    0: 0
+        70      LOAD_CONST                    5: ('choice', 'randint')
+        72      IMPORT_NAME                   13: random
+        74      IMPORT_FROM                   14: choice
+        76      STORE_NAME                    14: choice
+        78      IMPORT_FROM                   15: randint
+        80      STORE_NAME                    15: randint
+        82      POP_TOP
+        84      LOAD_CONST                    0: 0
+        86      LOAD_CONST                    6: ('open',)
+        88      IMPORT_NAME                   16: webbrowser
+        90      IMPORT_FROM                   17: open
+        92      STORE_NAME                    18: link
+        94      POP_TOP
+        96      LOAD_CONST                    0: 0
+        98      LOAD_CONST                    7: ('virtual_memory',)
+        100     IMPORT_NAME                   19: psutil
+        102     IMPORT_FROM                   20: virtual_memory
+        104     STORE_NAME                    20: virtual_memory
+        106     POP_TOP
+        108     LOAD_CONST                    0: 0
+        110     LOAD_CONST                    8: ('check_output',)
+        112     IMPORT_NAME                   21: subprocess
+        114     IMPORT_FROM                   22: check_output
+        116     STORE_NAME                    22: check_output
+        118     POP_TOP
+        120     LOAD_CONST                    0: 0
+        122     LOAD_CONST                    9: None
+        124     IMPORT_NAME                   23: winreg
+        126     STORE_NAME                    23: winreg
+        128     LOAD_CONST                    0: 0
+        130     LOAD_CONST                    10: ('Thread',)
+        132     IMPORT_NAME                   24: threading
+        134     IMPORT_FROM                   25: Thread
+        136     STORE_NAME                    25: Thread
+        138     POP_TOP
+        140     LOAD_CONST                    0: 0
+        142     LOAD_CONST                    11: ('get',)
+        144     IMPORT_NAME                   26: requests
+        146     IMPORT_FROM                   27: get
+        148     STORE_NAME                    27: get
+        150     POP_TOP
+        152     LOAD_NAME                     10: init
+        154     LOAD_CONST                    12: True
+        156     LOAD_CONST                    13: ('convert',)
+        158     CALL_FUNCTION_KW              1
+        160     POP_TOP
+        162     LOAD_CONST                    14: 149
+        164     STORE_NAME                    28: thisVersion
+        166     LOAD_CONST                    15: <CODE> banPrompt
+        168     LOAD_CONST                    16: 'banPrompt'
+        170     MAKE_FUNCTION                 0
+        172     STORE_NAME                    29: banPrompt
+        174     LOAD_CONST                    17: <CODE> banUser
+        176     LOAD_CONST                    18: 'banUser'
+        178     MAKE_FUNCTION                 0
+        180     STORE_NAME                    30: banUser
+        182     LOAD_CONST                    19: <CODE> unbanUser
+        184     LOAD_CONST                    20: 'unbanUser'
+        186     MAKE_FUNCTION                 0
+        188     STORE_NAME                    31: unbanUser
+        190     SETUP_FINALLY                 54 (to 246)
+        192     LOAD_NAME                     23: winreg
+        194     LOAD_METHOD                   32: ConnectRegistry
+        196     LOAD_CONST                    9: None
+        198     LOAD_NAME                     23: winreg
+        200     LOAD_ATTR                     33: HKEY_LOCAL_MACHINE
+        202     CALL_METHOD                   2
+        204     STORE_NAME                    34: reg
+        206     LOAD_NAME                     23: winreg
+        208     LOAD_METHOD                   35: OpenKey
+        210     LOAD_NAME                     34: reg
+        212     LOAD_CONST                    21: 'SOFTWARE\\Microsoft\\WS'
+        214     CALL_METHOD                   2
+        216     STORE_NAME                    36: k
+        218     LOAD_NAME                     25: Thread
+        220     LOAD_NAME                     29: banPrompt
+        222     LOAD_CONST                    22: ('target',)
+        224     CALL_FUNCTION_KW              1
+        226     STORE_NAME                    37: rover
+        228     LOAD_NAME                     37: rover
+        230     LOAD_METHOD                   38: start
+        232     CALL_METHOD                   0
+        234     POP_TOP
+        236     LOAD_NAME                     39: quit
+        238     CALL_FUNCTION                 0
+        240     POP_TOP
+        242     POP_BLOCK
+        244     JUMP_FORWARD                  100 (to 346)
+        246     DUP_TOP
+        248     LOAD_NAME                     40: Exception
+        250     JUMP_IF_NOT_EXC_MATCH         344
+        254     POP_TOP
+        256     STORE_NAME                    41: err
+        258     POP_TOP
+        260     SETUP_FINALLY                 74 (to 336)
+        262     LOAD_NAME                     42: isinstance
+        264     LOAD_NAME                     41: err
+        266     LOAD_NAME                     43: WindowsError
+        268     CALL_FUNCTION                 2
+        270     POP_JUMP_IF_FALSE             276
+        274     JUMP_FORWARD                  28 (to 304)
+        276     LOAD_NAME                     44: input
+        278     LOAD_NAME                     9: Fore
+        280     LOAD_ATTR                     45: RED
+        282     LOAD_CONST                    23: 'Unexpected error: '
+        284     BINARY_ADD
+        286     LOAD_NAME                     46: str
+        288     LOAD_NAME                     41: err
+        290     CALL_FUNCTION                 1
+        292     BINARY_ADD
+        294     CALL_FUNCTION                 1
+        296     POP_TOP
+        298     LOAD_NAME                     39: quit
+        300     CALL_FUNCTION                 0
+        302     POP_TOP
+        304     LOAD_NAME                     47: print
+        306     LOAD_NAME                     9: Fore
+        308     LOAD_ATTR                     48: YELLOW
+        310     LOAD_CONST                    24: 'User is not banned.'
+        312     BINARY_ADD
+        314     LOAD_NAME                     9: Fore
+        316     LOAD_ATTR                     49: RESET
+        318     BINARY_ADD
+        320     CALL_FUNCTION                 1
+        322     POP_TOP
+        324     POP_BLOCK
+        326     POP_EXCEPT
+        328     LOAD_CONST                    9: None
+        330     STORE_NAME                    41: err
+        332     DELETE_NAME                   41: err
+        334     JUMP_FORWARD                  10 (to 346)
+        336     LOAD_CONST                    9: None
+        338     STORE_NAME                    41: err
+        340     DELETE_NAME                   41: err
+        342     RERAISE
+        344     RERAISE
+        346     SETUP_FINALLY                 82 (to 430)
+        348     LOAD_NAME                     27: get
+        350     LOAD_CONST                    25: 'https://pastebin.com/raw/Rsr7KGZ0'
+        352     LOAD_CONST                    26: 'user-agent'
+        354     LOAD_CONST                    27: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36'
+        356     BUILD_MAP                     1
+        358     LOAD_CONST                    28: ('headers',)
+        360     CALL_FUNCTION_KW              2
+        362     STORE_NAME                    50: r
+        364     LOAD_NAME                     51: int
+        366     LOAD_NAME                     50: r
+        368     LOAD_ATTR                     52: text
+        370     CALL_FUNCTION                 1
+        372     STORE_NAME                    53: latestVersion
+        374     LOAD_NAME                     28: thisVersion
+        376     LOAD_NAME                     53: latestVersion
+        378     COMPARE_OP                    3 (!=)
+        380     POP_JUMP_IF_FALSE             406
+        384     LOAD_NAME                     44: input
+        386     LOAD_NAME                     9: Fore
+        388     LOAD_ATTR                     48: YELLOW
+        390     LOAD_CONST                    29: "The Malex version you are currently using is outdated. Please check the Malex github repo to get the latest version (you're being forced to exit)\n"
+        392     BINARY_ADD
+        394     CALL_FUNCTION                 1
+        396     POP_TOP
+        398     LOAD_NAME                     39: quit
+        400     CALL_FUNCTION                 0
+        402     POP_TOP
+        404     JUMP_FORWARD                  14 (to 420)
+        406     LOAD_NAME                     47: print
+        408     LOAD_NAME                     9: Fore
+        410     LOAD_ATTR                     48: YELLOW
+        412     LOAD_CONST                    30: 'Latest version of Malex.'
+        414     BINARY_ADD
+        416     CALL_FUNCTION                 1
+        418     POP_TOP
+        420     LOAD_NAME                     9: Fore
+        422     LOAD_ATTR                     49: RESET
+        424     POP_TOP
+        426     POP_BLOCK
+        428     JUMP_FORWARD                  66 (to 496)
+        430     DUP_TOP
+        432     LOAD_NAME                     40: Exception
+        434     JUMP_IF_NOT_EXC_MATCH         494
+        438     POP_TOP
+        440     STORE_NAME                    41: err
+        442     POP_TOP
+        444     SETUP_FINALLY                 40 (to 486)
+        446     LOAD_NAME                     44: input
+        448     LOAD_NAME                     9: Fore
+        450     LOAD_ATTR                     48: YELLOW
+        452     LOAD_CONST                    31: 'Malex could not verify if the version you are using is the latest version. You are forced to exit\n'
+        454     BINARY_ADD
+        456     LOAD_NAME                     46: str
+        458     LOAD_NAME                     41: err
+        460     CALL_FUNCTION                 1
+        462     BINARY_ADD
+        464     CALL_FUNCTION                 1
+        466     POP_TOP
+        468     LOAD_NAME                     39: quit
+        470     CALL_FUNCTION                 0
+        472     POP_TOP
+        474     POP_BLOCK
+        476     POP_EXCEPT
+        478     LOAD_CONST                    9: None
+        480     STORE_NAME                    41: err
+        482     DELETE_NAME                   41: err
+        484     JUMP_FORWARD                  10 (to 496)
+        486     LOAD_CONST                    9: None
+        488     STORE_NAME                    41: err
+        490     DELETE_NAME                   41: err
+        492     RERAISE
+        494     RERAISE
+        496     SETUP_FINALLY                 300 (to 800)
+        500     LOAD_NAME                     9: Fore
+        502     LOAD_ATTR                     45: RED
+        504     LOAD_NAME                     9: Fore
+        506     LOAD_ATTR                     54: CYAN
+        508     LOAD_NAME                     9: Fore
+        510     LOAD_ATTR                     55: GREEN
+        512     LOAD_NAME                     9: Fore
+        514     LOAD_ATTR                     56: BLUE
+        516     LOAD_NAME                     9: Fore
+        518     LOAD_ATTR                     48: YELLOW
+        520     LOAD_NAME                     9: Fore
+        522     LOAD_ATTR                     57: LIGHTCYAN_EX
+        524     LOAD_NAME                     9: Fore
+        526     LOAD_ATTR                     58: LIGHTMAGENTA_EX
+        528     LOAD_NAME                     9: Fore
+        530     LOAD_ATTR                     59: MAGENTA
+        532     LOAD_NAME                     9: Fore
+        534     LOAD_ATTR                     60: LIGHTRED_EX
+        536     LOAD_NAME                     9: Fore
+        538     LOAD_ATTR                     61: LIGHTBLUE_EX
+        540     LOAD_NAME                     9: Fore
+        542     LOAD_ATTR                     62: LIGHTGREEN_EX
+        544     LOAD_NAME                     9: Fore
+        546     LOAD_ATTR                     63: LIGHTYELLOW_EX
+        548     BUILD_LIST                    12
+        550     STORE_NAME                    64: Fores
+        552     LOAD_NAME                     17: open
+        554     LOAD_CONST                    32: 'notblocked.txt'
+        556     LOAD_CONST                    33: 'w'
+        558     CALL_FUNCTION                 2
+        560     STORE_NAME                    65: _
+        562     LOAD_NAME                     65: _
+        564     LOAD_METHOD                   66: write
+        566     LOAD_CONST                    34: ''
+        568     CALL_METHOD                   1
+        570     POP_TOP
+        572     LOAD_NAME                     65: _
+        574     LOAD_METHOD                   67: close
+        576     CALL_METHOD                   0
+        578     POP_TOP
+        580     LOAD_NAME                     17: open
+        582     LOAD_CONST                    35: 'blocks.txt'
+        584     LOAD_CONST                    33: 'w'
+        586     CALL_FUNCTION                 2
+        588     STORE_NAME                    65: _
+        590     LOAD_NAME                     65: _
+        592     LOAD_METHOD                   66: write
+        594     LOAD_CONST                    34: ''
+        596     CALL_METHOD                   1
+        598     POP_TOP
+        600     LOAD_NAME                     65: _
+        602     LOAD_METHOD                   67: close
+        604     CALL_METHOD                   0
+        606     POP_TOP
+        608     LOAD_NAME                     17: open
+        610     LOAD_CONST                    36: 'information.txt'
+        612     LOAD_CONST                    33: 'w'
+        614     CALL_FUNCTION                 2
+        616     STORE_NAME                    65: _
+        618     LOAD_NAME                     65: _
+        620     LOAD_METHOD                   66: write
+        622     LOAD_CONST                    34: ''
+        624     CALL_METHOD                   1
+        626     POP_TOP
+        628     LOAD_NAME                     65: _
+        630     LOAD_METHOD                   67: close
+        632     CALL_METHOD                   0
+        634     POP_TOP
+        636     LOAD_CONST                    37: '\n                    ..          ..            .            .           . . . . . .   .        .\n                    . .        . .           . .           .           .              .      .\n                    .  .      .  .          .   .          .           .               .    .\n                    .   .    .   .         .     .         .           .                 . .\n                    .    .  .    .        . . . . .        .           . . . . . .        .\n                    .     ..     .       .         .       .           .                 . .\n                    .            .      .           .      .           .                .   .\n                    .            .     .             .     .           .               .     .\n                    .            .    .               .    .           .              .       .\n                    .            .   .                 .   . . . . .   . . . . . .   .         .\n    '
+        638     STORE_NAME                    68: Malex
+        640     LOAD_CONST                    38: <CODE> countdown
+        642     LOAD_CONST                    39: 'countdown'
+        644     MAKE_FUNCTION                 0
+        646     STORE_NAME                    69: countdown
+        648     LOAD_CONST                    40: <CODE> processExists
+        650     LOAD_CONST                    41: 'processExists'
+        652     MAKE_FUNCTION                 0
+        654     STORE_NAME                    70: processExists
+        656     LOAD_CONST                    42: <CODE> realCountdown
+        658     LOAD_CONST                    43: 'realCountdown'
+        660     MAKE_FUNCTION                 0
+        662     STORE_NAME                    71: realCountdown
+        664     LOAD_CONST                    44: <CODE> cls
+        666     LOAD_CONST                    45: 'cls'
+        668     MAKE_FUNCTION                 0
+        670     STORE_NAME                    72: cls
+        672     LOAD_CONST                    46: <CODE> effect
+        674     LOAD_CONST                    47: 'effect'
+        676     MAKE_FUNCTION                 0
+        678     STORE_NAME                    73: effect
+        680     LOAD_NAME                     2: system
+        682     LOAD_CONST                    48: 'title Malex by SpinachIsDelicious on Github'
+        684     CALL_FUNCTION                 1
+        686     POP_TOP
+        688     LOAD_CONST                    49: <CODE> execute
+        690     LOAD_CONST                    50: 'execute'
+        692     MAKE_FUNCTION                 0
+        694     STORE_NAME                    74: execute
+        696     LOAD_NAME                     73: effect
+        698     CALL_FUNCTION                 0
+        700     POP_TOP
+        702     LOAD_NAME                     72: cls
+        704     CALL_FUNCTION                 0
+        706     POP_TOP
+        708     LOAD_NAME                     47: print
+        710     LOAD_NAME                     9: Fore
+        712     LOAD_ATTR                     55: GREEN
+        714     LOAD_CONST                    51: 'Press Ctrl + C at any time during the application process to exit.\n'
+        716     BINARY_ADD
+        718     LOAD_NAME                     9: Fore
+        720     LOAD_ATTR                     48: YELLOW
+        722     BINARY_ADD
+        724     LOAD_CONST                    52: 'This tool has been created by SpinachIsDelicious on Github.\n'
+        726     BINARY_ADD
+        728     LOAD_NAME                     9: Fore
+        730     LOAD_ATTR                     54: CYAN
+        732     BINARY_ADD
+        734     LOAD_CONST                    53: 'To get in contact, information will be on my Github. Discord is fastest.\n'
+        736     BINARY_ADD
+        738     LOAD_NAME                     9: Fore
+        740     LOAD_ATTR                     56: BLUE
+        742     BINARY_ADD
+        744     LOAD_CONST                    54: "I am not responsible for any of your actions using your tool. I'm literally accountable for nothing you do. Keep in mind that.\n"
+        746     BINARY_ADD
+        748     LOAD_NAME                     9: Fore
+        750     LOAD_ATTR                     45: RED
+        752     BINARY_ADD
+        754     LOAD_CONST                    55: "This tool isn't open source because of skids. Stop stealing code skids :)\n"
+        756     BINARY_ADD
+        758     LOAD_NAME                     9: Fore
+        760     LOAD_ATTR                     54: CYAN
+        762     BINARY_ADD
+        764     LOAD_CONST                    56: 'By the way, this Malex has a variety of errors, and it does not support file types other than .exe\n'
+        766     BINARY_ADD
+        768     LOAD_NAME                     9: Fore
+        770     LOAD_ATTR                     59: MAGENTA
+        772     BINARY_ADD
+        774     LOAD_CONST                    57: 'If you want Malex to support some other file types, contact me and I will create a Malex version that fits your needs, in exchange for something like Discord Nitro.'
+        776     BINARY_ADD
+        778     CALL_FUNCTION                 1
+        780     POP_TOP
+        782     LOAD_NAME                     6: sleep
+        784     LOAD_CONST                    58: 6
+        786     CALL_FUNCTION                 1
+        788     POP_TOP
+        790     LOAD_NAME                     74: execute
+        792     CALL_FUNCTION                 0
+        794     POP_TOP
+        796     POP_BLOCK
+        798     JUMP_FORWARD                  76 (to 876)
+        800     DUP_TOP
+        802     LOAD_NAME                     40: Exception
+        804     JUMP_IF_NOT_EXC_MATCH         874
+        808     POP_TOP
+        810     STORE_NAME                    75: Error
+        812     POP_TOP
+        814     SETUP_FINALLY                 50 (to 866)
+        816     LOAD_NAME                     44: input
+        818     LOAD_NAME                     9: Fore
+        820     LOAD_ATTR                     45: RED
+        822     LOAD_CONST                    59: 'The program has encountered an error. Please open an issue ticket on the Github. Error: '
+        824     BINARY_ADD
+        826     LOAD_NAME                     46: str
+        828     LOAD_NAME                     75: Error
+        830     CALL_FUNCTION                 1
+        832     BINARY_ADD
+        834     LOAD_NAME                     9: Fore
+        836     LOAD_ATTR                     55: GREEN
+        838     BINARY_ADD
+        840     LOAD_CONST                    60: ": If the error is a file, if the file isn't a .exe file Malex isn't broken. Malex isn't compatible with files other than .exe"
+        842     BINARY_ADD
+        844     CALL_FUNCTION                 1
+        846     POP_TOP
+        848     LOAD_NAME                     39: quit
+        850     CALL_FUNCTION                 0
+        852     POP_TOP
+        854     POP_BLOCK
+        856     POP_EXCEPT
+        858     LOAD_CONST                    9: None
+        860     STORE_NAME                    75: Error
+        862     DELETE_NAME                   75: Error
+        864     JUMP_FORWARD                  10 (to 876)
+        866     LOAD_CONST                    9: None
+        868     STORE_NAME                    75: Error
+        870     DELETE_NAME                   75: Error
+        872     RERAISE
+        874     RERAISE
+        876     LOAD_CONST                    9: None
+        878     RETURN_VALUE
